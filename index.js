@@ -31,9 +31,13 @@ app.get('/', (req, res) => {
     res.send(`<a href="http://yt-app-0dh0.onrender.com/auth/google/callback">Login now</a>`)
 })
 
+
+
 app.get('/login', (req, res) => {
     res.send(`<a href="http://yt-app-0dh0.onrender.com/auth/google/callback">Login now</a>`)
 })
+
+
 
 app.get('/logout', (req, res) => {
     req.logout((error) => {
