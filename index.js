@@ -28,15 +28,12 @@ app.use(passport.session())
 passportHandler()
 
 app.get('/', (req, res) => {
-    res.send(`<a href="http://yt-app-0dh0.onrender.com/auth/google/callback">Login now</a>`)
+    res.send(`<a href="https://yt-app-0dh0.onrender.com/auth/google">Login now</a>`)
 })
-
-
 
 app.get('/login', (req, res) => {
-    res.send(`<a href="http://yt-app-0dh0.onrender.com/auth/google/callback">Login now</a>`)
+    res.send(`<a href="https://yt-app-0dh0.onrender.com/auth/google">Login now</a>`)
 })
-
 
 
 app.get('/logout', (req, res) => {
@@ -50,7 +47,7 @@ app.get('/logout', (req, res) => {
 
 // apis routes
 app.use("/api/v1", router)
-app.use("/auth/google", Authrouter)
+app.use("https://yt-app-0dh0.onrender.com/auth/google", Authrouter)
 app.use("/api/v1", campaignRouter)
 
 // apis routes ends
