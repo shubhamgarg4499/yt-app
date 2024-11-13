@@ -8,7 +8,7 @@ function passportHandler() {
     passport.use(new GoogleStrategy(
         {
             clientID: process.env.client_id, clientSecret: process.env.client_secret,
-            callbackURL: "/auth/google/callback",
+            callbackURL: "http://yt-app-0dh0.onrender.com/auth/google/callback",
             scope: ['profile', 'email']
         }, async function (accessToken, refreshToken, profile, done) {
             try {
