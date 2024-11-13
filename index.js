@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/login', (req, res) => {
-    res.send(`<a href="http://localhost:4040/auth/google">Login now</a>`)
+    res.send(`<a href="/auth/google">Login now</a>`)
 })
 
 app.get('/logout', (req, res) => {
