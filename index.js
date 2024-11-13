@@ -5,7 +5,6 @@ const ErrorMiddleware = require("./middleware/Error.middleware");
 const router = require("./Routes/index.routes");
 const connectDB = require("./utils/ConnectDB");
 const app = express()
-// var GoogleStrategy = require('passport-google-oauth20').Strategy;
 require("dotenv").config()
 const PORT = process.env.PORT
 const cors = require('cors');
@@ -29,11 +28,11 @@ app.use(passport.session())
 passportHandler()
 
 app.get('/', (req, res) => {
-    res.send(`<a href="/auth/google">Login now</a>`)
+    res.send(`<a href="http://yt-app-0dh0.onrender.com/auth/google/callback">Login now</a>`)
 })
 
 app.get('/login', (req, res) => {
-    res.send(`<a href="/auth/google">Login now</a>`)
+    res.send(`<a href="http://yt-app-0dh0.onrender.com/auth/google/callback">Login now</a>`)
 })
 
 app.get('/logout', (req, res) => {
