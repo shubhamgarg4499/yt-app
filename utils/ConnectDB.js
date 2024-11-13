@@ -10,7 +10,9 @@ async function connectDB() {
         let connect = await mongoose.connect(mongoDB_Url);
         console.log(connect.connection.host)
     } catch (error) {
-        throw new ErrorHandler(error.status, error.message)
+        const message = error?.message || "Something went wrong while connecting DB"
+        const status = error?.status || 500
+        throw new ErrorHandler(status, message)
     }
 }
 module.exports = connectDB
