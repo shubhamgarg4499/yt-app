@@ -29,11 +29,11 @@ app.use(passport.session())
 passportHandler()
 
 app.get('/', (req, res) => {
-    res.send(`<a href="/auth/google">Login now</a>`)
+    res.send(`<a href="https://yt-app-0dh0.onrender.com/auth/google">Login now</a>`)
 })
 
 app.get('/login', (req, res) => {
-    res.send(`<a href="/auth/google">Login now</a>`)
+    res.send(`<a href="https://yt-app-0dh0.onrender.com/auth/google">Login now</a>`)
 })
 
 app.get('/logout', (req, res) => {
